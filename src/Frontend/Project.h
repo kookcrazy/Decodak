@@ -69,8 +69,45 @@ public:
 		PathStatus_None,
 		PathStatus_Expand,
 	};
-#endif
 
+	struct File
+	{
+		virtual ~File();
+
+		wxString GetDisplayName() const;
+		wxString GetFileType() const;
+
+		CodeState                   state;
+		bool                        temporary;
+		unsigned int                scriptIndex;
+		wxFileName                  fileName;
+		std::vector<unsigned int>   breakpoints;
+		wxString                    tempName;
+		Status                      status;
+
+		wxString                    type;       // Lua, etc.        
+
+		unsigned int                fileId;     // Unique id we use to match up symbol parsing results.
+		std::vector<Symbol*>        symbols;
+
+
+		bool						used;
+		bool						opened;
+		Path*						path;
+	};
+
+	struct Path
+	{
+		virtual ~Path();
+
+		wxString GetDisplayName() const;
+
+		wxString					pathName;
+		std::vector<File*>			files;
+		std::vector<Path*>			paths;
+		PathStatus                  status;
+	};
+#else
     struct File
     {
 
@@ -89,24 +126,7 @@ public:
         
         unsigned int                fileId;     // Unique id we use to match up symbol parsing results.
         std::vector<Symbol*>        symbols;
-
-#ifdef _KOOK_DECODA_
-		bool						used;
-		bool						opened;
-		Path*						path;
-#endif
     };
-
-#ifdef _KOOK_DECODA_
-	struct Path
-	{
-		wxString GetDisplayName() const;
-
-		wxString					pathName;
-		std::vector<File*>			files;
-		std::vector<Path*>			paths;
-		PathStatus                  status;
-	};
 #endif
 
     /**
@@ -439,7 +459,11 @@ private:
 private:
 
 	// Returns vector for temporary internal use
+#ifdef _KOOK_DECODA_
 	std::vector<File*>		GetSortedFileList();
+#else
+	std::vector<File*>		GetSortedFileList();
+#endif
 
     static unsigned int     s_lastFileId;
 
@@ -452,13 +476,16 @@ private:
     wxString                m_workingDirectory;
     wxString                m_symbolsDirectory;
 
-    std::vector<File*>      m_files;
+    
 #ifdef _KOOK_DECODA_
 	std::vector<Path*>		m_paths;
+	std::vector<File*>      m_files;
 	typedef std::map<wxString, File*> FILEMAP;
 	FILEMAP					m_fileMap;
 	std::vector<File*>      m_userfiles;
 	wxString				m_curOpenFileName;
+#else
+	std::vector<File*>      m_files;
 #endif
 
     unsigned int            m_tempIndex;

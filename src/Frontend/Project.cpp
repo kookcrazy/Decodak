@@ -34,50 +34,73 @@ along with Decoda.  If not, see <http://www.gnu.org/licenses/>.
 
 unsigned int Project::s_lastFileId = 0;
 
+#ifdef _KOOK_DECODA_
 wxString Project::File::GetDisplayName() const
 {
 
-    wxString displayName = fileName.GetFullName();
-    
-    if (displayName.IsEmpty())
-    {
-        displayName = tempName;
-    }
+	wxString displayName = fileName.GetFullName();
 
-    return displayName;
+	if (displayName.IsEmpty())
+	{
+		displayName = tempName;
+	}
+
+	return displayName;
 
 }
 
 wxString Project::File::GetFileType() const
 {
-    if (!type.IsEmpty())
-    {
-        return type;
-    }
-    else
-    {
-        return fileName.GetExt();
-    }
+	if (!type.IsEmpty())
+	{
+		return type;
+	}
+	else
+	{
+		return fileName.GetExt();
+	}
 }
 
-#ifdef _KOOK_DECODA_
+Project::File::~File()
+{
+	ClearVector(symbols);
+}
+
+Project::Path::~Path()
+{
+	ClearVector(paths);
+	ClearVector(files);
+}
+
 wxString Project::Path::GetDisplayName() const
 {
 	return pathName.AfterLast('\\');
 }
-
-void ClearPath(Project::Path* path)
+#else
+wxString Project::File::GetDisplayName() const
 {
-	for (unsigned int i = 0; i < path->paths.size(); ++i)
+
+	wxString displayName = fileName.GetFullName();
+
+	if (displayName.IsEmpty())
 	{
-		ClearPath(path->paths[i]);
+		displayName = tempName;
 	}
-	ClearVector(path->paths);
-	for (unsigned int i = 0; i < path->files.size(); ++i)
+
+	return displayName;
+
+}
+
+wxString Project::File::GetFileType() const
+{
+	if (!type.IsEmpty())
 	{
-		ClearVector(path->files[i]->symbols);
+		return type;
 	}
-	ClearVector(path->files);
+	else
+	{
+		return fileName.GetExt();
+	}
 }
 #endif
 
@@ -90,19 +113,16 @@ Project::Project()
 
 Project::~Project()
 {
-    
+
+#ifndef _KOOK_DECODA_
     for (unsigned int i = 0; i < m_files.size(); ++i)
     {
         ClearVector(m_files[i]->symbols);
     }    
-    
+#endif    
     ClearVector(m_files);
 
 #ifdef _KOOK_DECODA_
-	for (unsigned int i = 0; i < m_paths.size(); ++i)
-	{
-		ClearPath(m_paths[i]);
-	}
 	ClearVector(m_paths);
 
 	m_userfiles.clear();

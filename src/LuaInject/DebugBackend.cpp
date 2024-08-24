@@ -104,7 +104,21 @@ bool DebugBackend::Script::HasBreakPointInRange(unsigned int start, unsigned int
 
 bool DebugBackend::Script::ToggleBreakpoint(unsigned int line)
 {
-
+#ifdef _KOOK_DECODA_
+    for (std::vector<unsigned int>::iterator it = breakpoints.begin(); it != breakpoints.end(); it++)
+    {
+        if (*it < line)
+            continue;
+        if (*it > line) {
+            breakpoints.insert(it, line);
+            return true;
+        }
+        breakpoints.erase(it);
+        return false;
+    }
+    breakpoints.push_back(line);
+    return true;
+#else
     std::vector<unsigned int>::iterator result = std::find(breakpoints.begin(), breakpoints.end(), line);
 
     if (result == breakpoints.end())
@@ -117,6 +131,7 @@ bool DebugBackend::Script::ToggleBreakpoint(unsigned int line)
         breakpoints.erase(result);
         return false;
     }
+#endif
 }
 
 void DebugBackend::Script::ClearBreakpoints()
@@ -1110,7 +1125,7 @@ void DebugBackend::UpdateHookMode(unsigned long api, lua_State* L, lua_Debug* ho
 	}
 
     HookMode currentMode = vm->currentMode;
-    HookMode mode = m_mode != Mode_Continue ? HookMode_Full : HookMode_CallsAndReturns;//HookMode_CallsOnly;
+    HookMode mode = m_mode == Mode_StepInto ? HookMode_Full : HookMode_CallsAndReturns;//HookMode_CallsOnly;
 
     if (GetIsHookEventTailCall(api, arevent))
 	{
@@ -1139,20 +1154,20 @@ void DebugBackend::UpdateHookMode(unsigned long api, lua_State* L, lua_Debug* ho
         else
           break;
       }
-      if (vm->breakStackTop > 0)
-      {
-        BreakInfo &info = vm->breakStack[vm->breakStackTop - 1];
-        if (info.depth == vm->callStackDepth - 1)
-        {
-          if (info.breaked)
-          {
-            mode = HookMode_Full;
-            vm->breakpointInStack = true;
-          }
-          vm->lastStepSource = info.source;
-          vm->lastStepScript = info.scriptIndex;
-        }
-      }
+	  if (vm->breakStackTop > 0)
+	  {
+		  BreakInfo &info = vm->breakStack[vm->breakStackTop - 1];
+		  if (info.depth == vm->callStackDepth - 1)
+		  {
+			  if (info.breaked)
+			  {
+				  mode = HookMode_Full;
+				  vm->breakpointInStack = true;
+			  }
+			  vm->lastStepSource = info.source;
+			  vm->lastStepScript = info.scriptIndex;
+		  }
+	  }
       hookEvent = NULL;
     }
 
@@ -1163,7 +1178,7 @@ void DebugBackend::UpdateHookMode(unsigned long api, lua_State* L, lua_Debug* ho
       int linedefined = GetLineDefined(api, hookEvent);
 
       if (linedefined == -1)
-        return;
+        goto setmode;
 
       const char* arsource = GetSource(api, hookEvent);
       vm->lastFunctions = arsource;
@@ -1206,7 +1221,7 @@ void DebugBackend::UpdateHookMode(unsigned long api, lua_State* L, lua_Debug* ho
       else
         info.breaked = false;
     }
-
+setmode:
     if (currentMode != mode)
     {
       SetHookMode(api, L, mode);
@@ -2492,7 +2507,7 @@ bool DebugBackend::Evaluate(unsigned long api, lua_State* L, const std::string& 
         for (int i = 0; i < nresults; ++i)
         {
 #ifdef _KOOK_DECODA_
-			TiXmlNode* node = GetValueAsText(api, L, -1 - (nresults - 1 - i), 3);
+			TiXmlNode* node = GetValueAsText(api, L, -1 - (nresults - 1 - i), 9);
 #else
             TiXmlNode* node = GetValueAsText(api, L, -1 - (nresults - 1 - i));
 #endif
@@ -3647,7 +3662,7 @@ unsigned int DebugBackend::GetCStack(HANDLE hThread, StackEntry stack[], unsigne
         }
         else
         {
-            sprintf(stack[i].name, "0x%x", stackFrame[i].AddrPC.Offset);
+            sprintf(stack[i].name, "0x%llx", stackFrame[i].AddrPC.Offset);
         }
 
     }
