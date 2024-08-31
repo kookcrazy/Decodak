@@ -60,6 +60,193 @@ CodeEdit::CodeEdit()
 
 }
 
+#ifdef _KOOK_DECODA_
+void CodeEdit::SetFontColorSettings(const FontColorSettings& settings)
+{
+
+	// For some reason StyleSetFont takes a (non-const) reference, so we need to make
+	// a copy before passing it in.
+	wxFont font = settings.GetFont();
+
+	SetSelForeground(true, settings.GetColors(FontColorSettings::DisplayItem_Selection).foreColor);
+	SetSelBackground(true, settings.GetColors(FontColorSettings::DisplayItem_Selection).backColor);
+
+	StyleSetFont(wxSCI_STYLE_DEFAULT, font);
+	StyleSetForeground(wxSCI_STYLE_DEFAULT, settings.GetColors(FontColorSettings::DisplayItem_Default).foreColor);
+	StyleSetBackground(wxSCI_STYLE_DEFAULT, settings.GetColors(FontColorSettings::DisplayItem_Default).backColor);
+	StyleClearAll();
+
+	switch (GetLexer()) {
+	case wxSCI_LEX_LUA: {
+		font = settings.GetFont(FontColorSettings::DisplayItem_Default);
+		StyleSetFont(wxSCI_LUA_DEFAULT, font);
+		StyleSetFont(wxSCI_LUA_IDENTIFIER, font);
+		StyleSetForeground(wxSCI_LUA_DEFAULT, settings.GetColors(FontColorSettings::DisplayItem_Default).foreColor);
+		StyleSetBackground(wxSCI_LUA_DEFAULT, settings.GetColors(FontColorSettings::DisplayItem_Default).backColor);
+		StyleSetForeground(wxSCI_LUA_IDENTIFIER, settings.GetColors(FontColorSettings::DisplayItem_Default).foreColor);
+		StyleSetBackground(wxSCI_LUA_IDENTIFIER, settings.GetColors(FontColorSettings::DisplayItem_Default).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Comment);
+		StyleSetFont(wxSCI_LUA_COMMENT, font);
+		StyleSetFont(wxSCI_LUA_COMMENTLINE, font);
+		StyleSetFont(wxSCI_LUA_COMMENTDOC, font);
+		StyleSetForeground(wxSCI_LUA_COMMENT, settings.GetColors(FontColorSettings::DisplayItem_Comment).foreColor);
+		StyleSetBackground(wxSCI_LUA_COMMENT, settings.GetColors(FontColorSettings::DisplayItem_Comment).backColor);
+		StyleSetForeground(wxSCI_LUA_COMMENTLINE, settings.GetColors(FontColorSettings::DisplayItem_Comment).foreColor);
+		StyleSetBackground(wxSCI_LUA_COMMENTLINE, settings.GetColors(FontColorSettings::DisplayItem_Comment).backColor);
+		StyleSetForeground(wxSCI_LUA_COMMENTDOC, settings.GetColors(FontColorSettings::DisplayItem_Comment).foreColor);
+		StyleSetBackground(wxSCI_LUA_COMMENTDOC, settings.GetColors(FontColorSettings::DisplayItem_Comment).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Keyword);
+		StyleSetFont(wxSCI_LUA_WORD, font);
+		StyleSetForeground(wxSCI_LUA_WORD, settings.GetColors(FontColorSettings::DisplayItem_Keyword).foreColor);
+		StyleSetBackground(wxSCI_LUA_WORD, settings.GetColors(FontColorSettings::DisplayItem_Keyword).backColor);
+		StyleSetFont(wxSCI_LUA_WORD2, font);
+		StyleSetForeground(wxSCI_LUA_WORD2, settings.GetColors(FontColorSettings::DisplayItem_Keyword).foreColor);
+		StyleSetBackground(wxSCI_LUA_WORD2, settings.GetColors(FontColorSettings::DisplayItem_Keyword).backColor);
+		StyleSetFont(wxSCI_LUA_WORD3, font);
+		StyleSetForeground(wxSCI_LUA_WORD3, settings.GetColors(FontColorSettings::DisplayItem_Keyword).foreColor);
+		StyleSetBackground(wxSCI_LUA_WORD3, settings.GetColors(FontColorSettings::DisplayItem_Keyword).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Operator);
+		StyleSetFont(wxSCI_LUA_OPERATOR, font);
+		StyleSetForeground(wxSCI_LUA_OPERATOR, settings.GetColors(FontColorSettings::DisplayItem_Operator).foreColor);
+		StyleSetBackground(wxSCI_LUA_OPERATOR, settings.GetColors(FontColorSettings::DisplayItem_Operator).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_String);
+		StyleSetFont(wxSCI_LUA_STRING, font);
+		StyleSetForeground(wxSCI_LUA_STRING, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_LUA_STRING, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		StyleSetFont(wxSCI_LUA_STRINGEOL, font);
+		StyleSetForeground(wxSCI_LUA_STRINGEOL, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_LUA_STRINGEOL, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		StyleSetFont(wxSCI_LUA_LITERALSTRING, font);
+		StyleSetForeground(wxSCI_LUA_LITERALSTRING, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_LUA_LITERALSTRING, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		StyleSetFont(wxSCI_LUA_CHARACTER, font);
+		StyleSetForeground(wxSCI_LUA_CHARACTER, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_LUA_CHARACTER, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Number);
+		StyleSetFont(wxSCI_LUA_NUMBER, font);
+		StyleSetForeground(wxSCI_LUA_NUMBER, settings.GetColors(FontColorSettings::DisplayItem_Number).foreColor);
+		StyleSetBackground(wxSCI_LUA_NUMBER, settings.GetColors(FontColorSettings::DisplayItem_Number).backColor);
+		break;
+	}
+	case wxSCI_LEX_HTML:
+	case wxSCI_LEX_XML:
+		font = settings.GetFont(FontColorSettings::DisplayItem_Keyword);
+		StyleSetFont(wxSCI_H_TAG, font);
+		StyleSetForeground(wxSCI_H_TAG, settings.GetColors(FontColorSettings::DisplayItem_Keyword).foreColor);
+		StyleSetBackground(wxSCI_H_TAG, settings.GetColors(FontColorSettings::DisplayItem_Keyword).backColor);
+		StyleSetFont(wxSCI_H_TAGUNKNOWN, font);
+		StyleSetForeground(wxSCI_H_TAGUNKNOWN, settings.GetColors(FontColorSettings::DisplayItem_Keyword).foreColor);
+		StyleSetBackground(wxSCI_H_TAGUNKNOWN, settings.GetColors(FontColorSettings::DisplayItem_Keyword).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Number);
+		StyleSetFont(wxSCI_H_NUMBER, font);
+		StyleSetForeground(wxSCI_H_NUMBER, settings.GetColors(FontColorSettings::DisplayItem_Number).foreColor);
+		StyleSetBackground(wxSCI_H_NUMBER, settings.GetColors(FontColorSettings::DisplayItem_Number).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_String);
+		StyleSetFont(wxSCI_H_SINGLESTRING, font);
+		StyleSetForeground(wxSCI_H_SINGLESTRING, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_H_SINGLESTRING, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		StyleSetFont(wxSCI_H_DOUBLESTRING, font);
+		StyleSetForeground(wxSCI_H_DOUBLESTRING, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_H_DOUBLESTRING, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Comment);
+		StyleSetFont(wxSCI_H_COMMENT, font);
+		StyleSetForeground(wxSCI_H_COMMENT, settings.GetColors(FontColorSettings::DisplayItem_Comment).foreColor);
+		StyleSetBackground(wxSCI_H_COMMENT, settings.GetColors(FontColorSettings::DisplayItem_Comment).backColor);
+		break;
+	case wxSCI_LEX_CPP:
+		font = settings.GetFont(FontColorSettings::DisplayItem_Default);
+		StyleSetFont(wxSCI_C_DEFAULT, font);
+		StyleSetForeground(wxSCI_C_DEFAULT, settings.GetColors(FontColorSettings::DisplayItem_Default).foreColor);
+		StyleSetBackground(wxSCI_C_DEFAULT, settings.GetColors(FontColorSettings::DisplayItem_Default).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Comment);
+		StyleSetFont(wxSCI_C_COMMENT, font);
+		StyleSetFont(wxSCI_C_COMMENTLINE, font);
+		StyleSetFont(wxSCI_C_COMMENTDOC, font);
+		StyleSetForeground(wxSCI_C_COMMENT, settings.GetColors(FontColorSettings::DisplayItem_Comment).foreColor);
+		StyleSetBackground(wxSCI_C_COMMENT, settings.GetColors(FontColorSettings::DisplayItem_Comment).backColor);
+		StyleSetForeground(wxSCI_C_COMMENTLINE, settings.GetColors(FontColorSettings::DisplayItem_Comment).foreColor);
+		StyleSetBackground(wxSCI_C_COMMENTLINE, settings.GetColors(FontColorSettings::DisplayItem_Comment).backColor);
+		StyleSetForeground(wxSCI_C_COMMENTDOC, settings.GetColors(FontColorSettings::DisplayItem_Comment).foreColor);
+		StyleSetBackground(wxSCI_C_COMMENTDOC, settings.GetColors(FontColorSettings::DisplayItem_Comment).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Keyword);
+		StyleSetFont(wxSCI_C_WORD, font);
+		StyleSetForeground(wxSCI_C_WORD, settings.GetColors(FontColorSettings::DisplayItem_Keyword).foreColor);
+		StyleSetBackground(wxSCI_C_WORD, settings.GetColors(FontColorSettings::DisplayItem_Keyword).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Operator);
+		StyleSetFont(wxSCI_C_OPERATOR, font);
+		StyleSetForeground(wxSCI_C_OPERATOR, settings.GetColors(FontColorSettings::DisplayItem_Operator).foreColor);
+		StyleSetBackground(wxSCI_C_OPERATOR, settings.GetColors(FontColorSettings::DisplayItem_Operator).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Number);
+		StyleSetFont(wxSCI_C_NUMBER, font);
+		StyleSetForeground(wxSCI_C_NUMBER, settings.GetColors(FontColorSettings::DisplayItem_Number).foreColor);
+		StyleSetBackground(wxSCI_C_NUMBER, settings.GetColors(FontColorSettings::DisplayItem_Number).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_String);
+		StyleSetFont(wxSCI_C_STRING, font);
+		StyleSetForeground(wxSCI_C_STRING, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_C_STRING, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		StyleSetFont(wxSCI_C_CHARACTER, font);
+		StyleSetForeground(wxSCI_C_CHARACTER, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_C_CHARACTER, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		StyleSetFont(wxSCI_C_UUID, font);
+		StyleSetForeground(wxSCI_C_UUID, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_C_UUID, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		break;
+	case wxSCI_LEX_PYTHON:
+		font = settings.GetFont(FontColorSettings::DisplayItem_Default);
+		StyleSetFont(wxSCI_P_DEFAULT, font);
+		StyleSetForeground(wxSCI_P_DEFAULT, settings.GetColors(FontColorSettings::DisplayItem_Default).foreColor);
+		StyleSetBackground(wxSCI_P_DEFAULT, settings.GetColors(FontColorSettings::DisplayItem_Default).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Comment);
+		StyleSetFont(wxSCI_P_COMMENTLINE, font);
+		StyleSetForeground(wxSCI_P_COMMENTLINE, settings.GetColors(FontColorSettings::DisplayItem_Comment).foreColor);
+		StyleSetBackground(wxSCI_P_COMMENTLINE, settings.GetColors(FontColorSettings::DisplayItem_Comment).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Keyword);
+		StyleSetFont(wxSCI_P_WORD, font);
+		StyleSetForeground(wxSCI_P_WORD, settings.GetColors(FontColorSettings::DisplayItem_Keyword).foreColor);
+		StyleSetBackground(wxSCI_P_WORD, settings.GetColors(FontColorSettings::DisplayItem_Keyword).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Operator);
+		StyleSetFont(wxSCI_P_OPERATOR, font);
+		StyleSetForeground(wxSCI_P_OPERATOR, settings.GetColors(FontColorSettings::DisplayItem_Operator).foreColor);
+		StyleSetBackground(wxSCI_P_OPERATOR, settings.GetColors(FontColorSettings::DisplayItem_Operator).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_Number);
+		StyleSetFont(wxSCI_P_NUMBER, font);
+		StyleSetForeground(wxSCI_P_NUMBER, settings.GetColors(FontColorSettings::DisplayItem_Number).foreColor);
+		StyleSetBackground(wxSCI_P_NUMBER, settings.GetColors(FontColorSettings::DisplayItem_Number).backColor);
+
+		font = settings.GetFont(FontColorSettings::DisplayItem_String);
+		StyleSetFont(wxSCI_P_STRING, font);
+		StyleSetForeground(wxSCI_P_STRING, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_P_STRING, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		StyleSetFont(wxSCI_P_CHARACTER, font);
+		StyleSetForeground(wxSCI_P_CHARACTER, settings.GetColors(FontColorSettings::DisplayItem_String).foreColor);
+		StyleSetBackground(wxSCI_P_CHARACTER, settings.GetColors(FontColorSettings::DisplayItem_String).backColor);
+		break;
+	}
+
+	StyleSetSize(wxSCI_STYLE_LINENUMBER, font.GetPointSize());
+
+	// Set the caret color as the inverse of the background color so it's always visible.
+	SetCaretForeground(GetInverse(settings.GetColors(FontColorSettings::DisplayItem_Default).backColor));
+
+}
+#else
 void CodeEdit::SetFontColorSettings(const FontColorSettings& settings)
 {
 
@@ -129,6 +316,7 @@ void CodeEdit::SetFontColorSettings(const FontColorSettings& settings)
     SetCaretForeground( GetInverse(settings.GetColors(FontColorSettings::DisplayItem_Default).backColor) );
 
 }
+#endif
 
 void CodeEdit::SetAutoCompleteManager(const AutoCompleteManager* autoCompleteManager)
 {
@@ -176,7 +364,11 @@ void CodeEdit::SetDefaultLexer()
 
     SetLexer(wxSCI_LEX_NULL);
 
+#ifdef _KOOK_DECODA_
+	SetKeyWords(0, "");
+#else
     SetKeyWords(1, "");
+#endif
 
     // Set the caret width to match MSVC.
     SetCaretWidth(2);
@@ -187,7 +379,11 @@ void CodeEdit::SetDefaultLexer()
     MarkerDefineBitmap(Marker_BreakLine,   wxMEMORY_BITMAP(Breakline_png) );
 
     // Setup the dwell time before a tooltip is displayed.
+#ifdef _KOOK_DECODA_
+	SetMouseDwellTime(1000);
+#else
     SetMouseDwellTime(300);
+#endif
 
     SetMarginSensitive(1, true);
     SetMarginType(1, wxSCI_MARGIN_SYMBOL);
@@ -208,6 +404,27 @@ void CodeEdit::SetDefaultLexer()
 
 }
 
+#ifdef _KOOK_DECODA_
+void CodeEdit::SetLexerByExt(wxString ext)
+{
+	SetDefaultLexer();
+
+	ext.MakeLower();
+	if (ext == "xml") {
+		SetLexer(wxSCI_LEX_XML);
+	}
+	else if (ext == "cpp" || ext == "h" || ext == "hpp" || ext == "cxx" || ext == "c") {
+		SetLexer(wxSCI_LEX_CPP);
+	}
+	else if (ext == "html" || ext == "php") {
+		SetLexer(wxSCI_LEX_HTML);
+	}
+	else if (ext == "py") {
+		SetLexer(wxSCI_LEX_PYTHON);
+	}
+}
+#endif
+
 void CodeEdit::SetLuaLexer()
 {
 
@@ -221,13 +438,18 @@ void CodeEdit::SetLuaLexer()
         "in        local     nil       not       or "
 #ifdef _KOOK_DECODA_
         "repeat    return    then      true      until     while "
-		"continue self this super include new delete namespace "
+		"continue include new delete namespace "
 		"class switch case fn elif var let as define ";
 #else
         "repeat    return    then      true      until     while ";
 #endif
 
+#ifdef _KOOK_DECODA_
+	SetKeyWords(0, keywords);
+	SetKeyWords(1, "self super this ");
+#else
     SetKeyWords(1, keywords);
+#endif
 
 }
 

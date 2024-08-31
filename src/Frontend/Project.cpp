@@ -35,6 +35,10 @@ along with Decoda.  If not, see <http://www.gnu.org/licenses/>.
 unsigned int Project::s_lastFileId = 0;
 
 #ifdef _KOOK_DECODA_
+wxString sProjectFileExts[] = {"lua", "txt", "xml", "cpp", "cxx", "c", "h", "hpp", "php", "html", "py", ""};
+#endif
+
+#ifdef _KOOK_DECODA_
 wxString Project::File::GetDisplayName() const
 {
 
@@ -590,7 +594,11 @@ void Project::AddFiles2Path(const wxString& pathName, Project::Path* path)
 	} while (FindNextFile(handle, &data));
 	FindClose(handle);
 
+#ifdef _KOOK_DECODA_
+	findstr = pathName + "\\*.*";
+#else
 	findstr = pathName  + "\\*.lua";
+#endif
 	handle = FindFirstFile(findstr, &data);
 	if (handle == NULL)
 		return;
@@ -598,8 +606,27 @@ void Project::AddFiles2Path(const wxString& pathName, Project::Path* path)
 	File* newfile;
 	FILEMAP::iterator it;
 	wxString fileName;
+#ifdef _KOOK_DECODA_
+	wxString ext;
+#endif
 	do {
 		if ((data.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != FILE_ATTRIBUTE_DIRECTORY) {
+#ifdef _KOOK_DECODA_
+			ext = strrchr(data.cFileName, '.');
+			if (ext.IsEmpty())
+				continue;
+			ext = ext.Mid(1);
+			ext.MakeLower();
+			wxString* exts = sProjectFileExts;
+			bool found = false;
+			for(int i = 0; !sProjectFileExts[i].IsEmpty(); i++)
+				if (ext == sProjectFileExts[i]) {
+					found = true;
+					break;
+				}
+			if (!found)
+				continue;
+#endif
 			fileName = pathName + "\\" + data.cFileName;
 
 			it = m_fileMap.find(fileName.Lower());

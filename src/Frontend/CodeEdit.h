@@ -83,6 +83,10 @@ public:
      */
     void SetLuaLexer();
 
+#ifdef _KOOK_DECODA_
+    void SetLexerByExt(wxString ext);
+#endif
+
     /**
      * Replaces tabs in the entire document with spaces. Returns true if any
      * replacements were made.

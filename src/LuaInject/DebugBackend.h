@@ -640,7 +640,11 @@ private:
 #endif
 
     static DebugBackend*            s_instance;
+#ifdef _KOOK_DECODA_
+	static const unsigned int       s_maxStackSize = 200;
+#else
     static const unsigned int       s_maxStackSize  = 100;
+#endif
 
     FILE*                           m_log;
 

@@ -6404,7 +6404,11 @@ void MainFrame::UpdateSyntaxColoring(OpenFile* openFile)
     }
     else
     {
+#ifdef _KOOK_DECODA_
+		openFile->edit->SetLexerByExt(file->GetFileType());
+#else
         openFile->edit->SetDefaultLexer();
+#endif
     }
 
     openFile->edit->Recolor();

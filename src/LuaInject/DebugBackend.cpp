@@ -809,128 +809,128 @@ void DebugBackend::HookCallback(unsigned long api, lua_State* L, lua_Debug* ar)
     }
 
 #ifdef _KOOK_DECODA_
-    if (vm->name.empty())
-    {
-      lua_rawgetglobal_dll(api, L, "decoda_name");
-      const char* name = lua_tostring_dll(api, L, -1);
+	if (vm->name.empty())
+	{
+		lua_rawgetglobal_dll(api, L, "decoda_name");
+		const char* name = lua_tostring_dll(api, L, -1);
 
-      if (name == NULL)
-      {
-        name = "<unknow>";
-      }
+		if (name == NULL)
+		{
+		name = "<unknow>";
+		}
 
-      vm->name = name;
-      m_eventChannel.WriteUInt32(EventId_NameVM);
-      m_eventChannel.WriteUInt32(reinterpret_cast<int>(L));
-      m_eventChannel.WriteString(vm->name);
+		vm->name = name;
+		m_eventChannel.WriteUInt32(EventId_NameVM);
+		m_eventChannel.WriteUInt32(reinterpret_cast<int>(L));
+		m_eventChannel.WriteString(vm->name);
 
-      lua_pop_dll(api, L, 1);
-    }
+		lua_pop_dll(api, L, 1);
+	}
 
     vm->currentMode = GetHookMode(api, L);
 
     int arevent = GetEvent(api, ar);
     if (arevent == LUA_HOOKLINE)
     {
-      bool stop = false;
-      bool onLastStepLine = false;
-      bool check = true;
-      int scriptIndex;
+		bool stop = false;
+		bool onLastStepLine = false;
+		bool check = true;
+		int scriptIndex;
 
-      switch (m_mode) {
-      case Mode_StepInto:
-        stop = true;
-        break;
-      case Mode_StepOut:
-        if (vm->callCount <= 0) {
-          stop = true;
-        }
-        break;
-      case Mode_StepOver:
-        if (vm->callCount <= 0) {
-          stop = true;
-        }
-        break;
-      default:
-        UpdateHookMode(api, L, ar);
-        if (vm->currentMode == HookMode_Full)
-          check = true;
-      }
+		switch (m_mode) {
+		case Mode_StepInto:
+			stop = true;
+			break;
+		case Mode_StepOut:
+			if (vm->callCount <= 0) {
+				stop = true;
+			}
+			break;
+		case Mode_StepOver:
+			if (vm->callCount <= 0) {
+				stop = true;
+			}
+			break;
+		default:
+			UpdateHookMode(api, L, ar);
+			if (vm->currentMode == HookMode_Full)
+				check = true;
+		}
 
-      while (check || stop) {
-        lua_getinfo_dll(api, L, "Sl", ar);
-        const char* arsource = GetSource(api, ar);
+		while (check || stop) {
+			lua_getinfo_dll(api, L, "Sl", ar);
+			const char* arsource = GetSource(api, ar);
 
-        if (arsource == vm->lastStepSource)
-          scriptIndex = vm->lastStepScript;
-        else
-          scriptIndex = GetScriptIndex(arsource);
+			if (arsource == vm->lastStepSource)
+				scriptIndex = vm->lastStepScript;
+			else
+				scriptIndex = GetScriptIndex(arsource);
 
-        if (scriptIndex == -1)
-        {
-          if (m_mode != Mode_StepInto) {
-            vm->lastStepScript = scriptIndex;
-            vm->lastStepSource = arsource;
-            break;
-          }
-          scriptIndex = RegisterScript(api, L, ar);
-        }
+			if (scriptIndex == -1)
+			{
+				if (m_mode != Mode_StepInto) {
+				vm->lastStepScript = scriptIndex;
+				vm->lastStepSource = arsource;
+				break;
+				}
+				scriptIndex = RegisterScript(api, L, ar);
+			}
 
-        if (scriptIndex != -1)
-        {
-          vm->lastStepScript = scriptIndex;
-          vm->lastStepSource = arsource;
-        }
+			if (scriptIndex != -1)
+			{
+				vm->lastStepScript = scriptIndex;
+				vm->lastStepSource = arsource;
+			}
 
-        if (vm->luaJitWorkAround)
-        {
-          int stackDepth = GetStackDepth(api, L);
+			if (vm->luaJitWorkAround)
+			{
+				int stackDepth = GetStackDepth(api, L);
 
-          //We will get multiple line events for the same line in LuaJIT if there are only calls to C functions on the line 
-          if (vm->lastStepLine == GetCurrentLine(api, ar))
-          {
-            onLastStepLine = vm->lastStepScript == scriptIndex && vm->callStackDepth != 0 && stackDepth == vm->callStackDepth;
-          }
+				//We will get multiple line events for the same line in LuaJIT if there are only calls to C functions on the line 
+				if (vm->lastStepLine == GetCurrentLine(api, ar))
+				{
+				onLastStepLine = vm->lastStepScript == scriptIndex && vm->callStackDepth != 0 && stackDepth == vm->callStackDepth;
+				}
 
-          // If we're stepping on each line or we just stepped out of a function that
-          // we were stepping over, break.
-          if (m_mode == Mode_StepOver && vm->callStackDepth > 0)
-          {
-            if (stackDepth < vm->callStackDepth || (stackDepth == vm->callStackDepth && !onLastStepLine))
-            {
-              // We've returned to the level when the function was called.
-              vm->callCount = 0;
-              vm->callStackDepth = 0;
-            }
-          }
-        }
+				// If we're stepping on each line or we just stepped out of a function that
+				// we were stepping over, break.
+				if (m_mode == Mode_StepOver && vm->callStackDepth > 0)
+				{
+				if (stackDepth < vm->callStackDepth || (stackDepth == vm->callStackDepth && !onLastStepLine))
+				{
+					// We've returned to the level when the function was called.
+					vm->callCount = 0;
+					vm->callStackDepth = 0;
+				}
+				}
+			}
 
-        if (!stop)
-        {
-          if (scriptIndex != -1)
-          {
-            // Check to see if we're on a breakpoint and should break.
-            if (!onLastStepLine && m_scripts[scriptIndex]->GetHasBreakPoint(GetCurrentLine(api, ar) - 1))
-            {
-              stop = true;
-            }
-          }
-        }
-        break;
-      }
+			if (!stop)
+			{
+				if (scriptIndex != -1)
+				{
+				// Check to see if we're on a breakpoint and should break.
+				if (!onLastStepLine && m_scripts[scriptIndex]->GetHasBreakPoint(GetCurrentLine(api, ar) - 1))
+				{
+					stop = true;
+				}
+				}
+			}
+			break;
+		}
 
-      m_criticalSection.Exit();
+		m_criticalSection.Exit();
 
-      if (stop)
-      {
-        BreakFromScript(api, L);
+		if (stop)
+		{
+			BreakFromScript(api, L);
 
-        if (vm->luaJitWorkAround)
-        {
-          vm->callStackDepth = GetStackDepth(api, L);
-          vm->lastStepLine = GetCurrentLine(api, ar);
-        }
-      }
+			if (vm->luaJitWorkAround)
+			{
+				vm->callStackDepth = GetStackDepth(api, L);
+				vm->lastStepLine = GetCurrentLine(api, ar);
+			}
+		}
     }
     else
     {
@@ -1728,6 +1728,80 @@ void DebugBackend::DeleteAllBreakpoints(){
     SetHaveActiveBreakpoints(false);
 }
 
+#ifdef _KOOK_DECODA_
+void DebugBackend::SendBreakEvent(unsigned long api, lua_State* L, int stackTop)
+{
+	CriticalSectionLock lock(m_criticalSection);
+
+	VirtualMachine* vm = GetVm(L);
+
+	// The C call stack will look something like this (may be any number of
+	// these stacked on top of each other):
+	//
+	//   +------+
+	//   |      | C function
+	//   +------+
+	//   |      |
+	//   | XXXX | Lua call mechanism (luaD_*, luaV_*, lua_*)
+	//   |      |
+	//   +------+
+	//   | XXXX | lua_call/lua_pcall/lua_load, etc.
+	//   +------+
+	//   |      |
+	//   |      | Pre-Lua code (main, etc.)
+	//   |      |
+	//   +------+
+
+	StackEntry nativeStack[s_maxStackSize];
+	unsigned int nativeStackSize = 0;
+
+	if (vm != NULL)
+	{
+		// Remember how many stack levels to skip so when we evaluate we can adjust
+		// the stack level accordingly.
+		vm->stackTop = stackTop;
+		nativeStackSize = GetCStack(vm->hThread, nativeStack, s_maxStackSize);
+	}
+	else
+	{
+		// For whatever reason we couldn't remember how many stack levels we want to skip,
+		// so don't skip any. This shouldn't happen under any normal circumstance since
+		// the state should have a corresponding VM.
+		stackTop = 0;
+	}
+
+	m_eventChannel.WriteUInt32(EventId_Break);
+	m_eventChannel.WriteUInt32(reinterpret_cast<int>(L));
+
+	// Send the call stack.
+
+	lua_Debug scriptStack[s_maxStackSize];
+	unsigned int scriptStackSize = 0;
+
+	for (int level = stackTop; scriptStackSize < s_maxStackSize && lua_getstack_dll(api, L, level, &scriptStack[scriptStackSize]); ++level)
+	{
+		lua_getinfo_dll(api, L, "nSlu", &scriptStack[scriptStackSize]);
+		++scriptStackSize;
+	}
+
+	// Create a unified call stack.
+	StackEntry stack[s_maxStackSize];
+	unsigned int stackSize = GetUnifiedStack(api, nativeStack, nativeStackSize, scriptStack, scriptStackSize, stack);
+
+	m_eventChannel.WriteUInt32(stackSize);
+
+	for (unsigned int i = 0; i < stackSize; ++i)
+	{
+		unsigned int stackIndex = stackSize - i - 1;
+		m_eventChannel.WriteUInt32(stack[stackIndex].scriptIndex);
+		m_eventChannel.WriteUInt32(stack[stackIndex].line);
+		m_eventChannel.WriteString(stack[stackIndex].name);
+	}
+
+	m_eventChannel.Flush();
+}
+
+#else
 void DebugBackend::SendBreakEvent(unsigned long api, lua_State* L, int stackTop)
 {
 
@@ -1801,6 +1875,7 @@ void DebugBackend::SendBreakEvent(unsigned long api, lua_State* L, int stackTop)
     m_eventChannel.Flush();
 
 }
+#endif
 
 void DebugBackend::SendExceptionEvent(lua_State* L, const char* message)
 {
