@@ -42,7 +42,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\include,..\src\scintilla\include,..\src\scintilla\src,$(WXDEVEL)\include,$(WXDEVEL)\lib\vc_lib\msw"
-				PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;__WX__;SCI_LEXER;LINK_LEXERS"
+				PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -114,7 +114,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\include,..\src\scintilla\include,..\src\scintilla\src,$(WXDEVEL)\include,$(WXDEVEL)\lib\vc_lib\mswd"
-				PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;__WX__;SCI_LEXER;LINK_LEXERS"
+				PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
@@ -187,7 +187,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\include,..\src\scintilla\include,..\src\scintilla\src,..\..\wxWidgets\include,..\..\wxWidgets\lib\vc_lib\msw"
-				PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;__WX__;SCI_LEXER;LINK_LEXERS;_CRT_SECURE_NO_WARNINGS"
+				PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;__WX__;SCI_LEXER;LINK_LEXERS;_CRT_SECURE_NO_WARNINGS;_KOOK_DECODA_"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -260,7 +260,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\include,..\src\scintilla\include,..\src\scintilla\src,$(WXDEVEL)\include,$(WXDEVEL)\lib\vc_lib\mswuniv"
-				PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;__WX__;SCI_LEXER;LINK_LEXERS"
+				PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -332,7 +332,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\include,..\src\scintilla\include,..\src\scintilla\src,$(WXDEVEL)\include,$(WXDEVEL)\lib\vc_lib\mswunivd"
-				PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;__WX__;SCI_LEXER;LINK_LEXERS"
+				PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
@@ -405,7 +405,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\include,..\src\scintilla\include,..\src\scintilla\src,$(WXSTABLE)\include,$(WXSTABLE)\lib\vc_lib\mswud"
-				PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;__WX__;SCI_LEXER;LINK_LEXERS"
+				PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
@@ -477,7 +477,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\include,..\src\scintilla\include,..\src\scintilla\src,..\..\wxWidgets\include,..\..\wxWidgets\lib\vc_lib\mswd"
-				PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;__WX__;SCI_LEXER;LINK_LEXERS;_CRT_SECURE_NO_WARNINGS"
+				PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;__WX__;SCI_LEXER;LINK_LEXERS;_CRT_SECURE_NO_WARNINGS;_KOOK_DECODA_"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
@@ -551,7 +551,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\include,..\src\scintilla\include,..\src\scintilla\src,$(WXSTABLE)\include,$(WXSTABLE)\lib\vc_lib\mswu"
-				PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;__WX__;SCI_LEXER;LINK_LEXERS"
+				PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -665,7 +665,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -687,7 +687,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -753,7 +753,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -775,7 +775,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -841,7 +841,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -863,7 +863,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -953,7 +953,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -975,7 +975,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1045,7 +1045,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1067,7 +1067,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1137,7 +1137,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1159,7 +1159,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1233,7 +1233,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1255,7 +1255,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1325,7 +1325,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1347,7 +1347,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1425,7 +1425,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1447,7 +1447,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1517,7 +1517,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1539,7 +1539,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1609,7 +1609,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1631,7 +1631,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1709,7 +1709,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1731,7 +1731,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1801,7 +1801,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1823,7 +1823,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1893,7 +1893,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -1915,7 +1915,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1989,7 +1989,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2011,7 +2011,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2077,7 +2077,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2099,7 +2099,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2165,7 +2165,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2187,7 +2187,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2253,7 +2253,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2275,7 +2275,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2345,7 +2345,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2367,7 +2367,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2433,7 +2433,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2455,7 +2455,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2521,7 +2521,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2543,7 +2543,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2609,7 +2609,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2631,7 +2631,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2697,7 +2697,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2719,7 +2719,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2785,7 +2785,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2807,7 +2807,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2873,7 +2873,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2895,7 +2895,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2961,7 +2961,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -2983,7 +2983,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3053,7 +3053,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3075,7 +3075,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3141,7 +3141,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3163,7 +3163,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3229,7 +3229,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3251,7 +3251,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3317,7 +3317,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3339,7 +3339,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3405,7 +3405,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3427,7 +3427,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3497,7 +3497,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3519,7 +3519,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3585,7 +3585,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3607,7 +3607,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3673,7 +3673,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3695,7 +3695,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3761,7 +3761,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3783,7 +3783,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3849,7 +3849,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3871,7 +3871,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -3937,7 +3937,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -3959,7 +3959,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4029,7 +4029,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4051,7 +4051,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4117,7 +4117,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4139,7 +4139,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4205,7 +4205,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4227,7 +4227,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4293,7 +4293,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4315,7 +4315,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4381,7 +4381,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4403,7 +4403,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4469,7 +4469,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4491,7 +4491,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4557,7 +4557,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4579,7 +4579,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4645,7 +4645,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4667,7 +4667,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4737,7 +4737,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4759,7 +4759,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4825,7 +4825,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4847,7 +4847,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -4913,7 +4913,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -4935,7 +4935,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5001,7 +5001,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5023,7 +5023,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5089,7 +5089,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5111,7 +5111,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5181,7 +5181,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5203,7 +5203,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5269,7 +5269,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5291,7 +5291,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5357,7 +5357,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5379,7 +5379,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5445,7 +5445,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5467,7 +5467,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5533,7 +5533,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5555,7 +5555,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5621,7 +5621,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5643,7 +5643,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5713,7 +5713,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5735,7 +5735,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5809,7 +5809,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5831,7 +5831,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5897,7 +5897,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -5919,7 +5919,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -5989,7 +5989,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6011,7 +6011,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6077,7 +6077,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6099,7 +6099,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6165,7 +6165,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6187,7 +6187,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6253,7 +6253,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6275,7 +6275,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6341,7 +6341,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6363,7 +6363,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6429,7 +6429,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6451,7 +6451,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6517,7 +6517,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6539,7 +6539,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6605,7 +6605,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6627,7 +6627,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6693,7 +6693,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6715,7 +6715,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6781,7 +6781,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6803,7 +6803,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6869,7 +6869,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6891,7 +6891,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -6957,7 +6957,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -6979,7 +6979,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7045,7 +7045,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7067,7 +7067,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7133,7 +7133,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7155,7 +7155,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7221,7 +7221,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7243,7 +7243,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7333,7 +7333,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7355,7 +7355,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7425,7 +7425,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7447,7 +7447,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7533,7 +7533,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7555,7 +7555,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7637,7 +7637,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7659,7 +7659,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7729,7 +7729,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7751,7 +7751,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7825,7 +7825,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7847,7 +7847,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -7917,7 +7917,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -7939,7 +7939,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -8009,7 +8009,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -8031,7 +8031,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>
@@ -8101,7 +8101,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 						BasicRuntimeChecks="3"
 					/>
 				</FileConfiguration>
@@ -8123,7 +8123,7 @@
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;$(NoInherit)"
+						PreprocessorDefinitions="WIN32;_LIB;__WXMSW__;_UNICODE;__WX__;SCI_LEXER;LINK_LEXERS;_KOOK_DECODA_;$(NoInherit)"
 					/>
 				</FileConfiguration>
 			</File>

@@ -27,6 +27,10 @@
 using namespace Scintilla;
 #endif
 
+#ifdef _KOOK_DECODA_
+#define SCE_LUA_NEXTIDENTIFIER 20
+#endif
+
 // Test for [=[ ... ]=] delimiters, returns 0 if it's only a [ or ],
 // return 1 for [[ or ]], returns >=2 for [=[ or ]=] and so on.
 // The maximum number of '=' characters allowed is 254.
@@ -57,7 +61,11 @@ static void ColouriseLuaDoc(
 
 	// Accepts accented characters
 	CharacterSet setWordStart(CharacterSet::setAlpha, "_", 0x80, true);
+#ifdef _KOOK_DECODA_
+	CharacterSet setWord(CharacterSet::setAlphaNum, "_", 0x80, true);
+#else
 	CharacterSet setWord(CharacterSet::setAlphaNum, "._", 0x80, true);
+#endif
 	// Not exactly following number definition (several dots are seen as OK, etc.)
 	// but probably enough in most cases.
 	CharacterSet setNumber(CharacterSet::setDigits, ".-+abcdefABCDEF");
@@ -134,6 +142,19 @@ static void ColouriseLuaDoc(
 			if (!setWord.Contains(sc.ch) || sc.Match('.', '.')) {
 				char s[100];
 				sc.GetCurrent(s, sizeof(s));
+#ifdef _KOOK_DECODA_
+				if (sc.ch == '.' || sc.ch == ':') {
+					if (keywords2.InList(s)) {
+						sc.ChangeState(SCE_LUA_WORD);
+					}
+					sc.ForwardSetState(SCE_LUA_OPERATOR);
+				}
+				else if (keywords.InList(s)) {
+					sc.ChangeState(SCE_LUA_WORD);
+					sc.SetState(SCE_LUA_DEFAULT);
+				}
+				else
+#else
 				if (keywords.InList(s)) {
 					sc.ChangeState(SCE_LUA_WORD);
 				} else if (keywords2.InList(s)) {
@@ -151,8 +172,40 @@ static void ColouriseLuaDoc(
 				} else if (keywords8.InList(s)) {
 					sc.ChangeState(SCE_LUA_WORD8);
 				}
+#endif
 				sc.SetState(SCE_LUA_DEFAULT);
 			}
+#ifdef _KOOK_DECODA_
+		}
+		else if (sc.state == SCE_LUA_NEXTIDENTIFIER) {
+			if (!setWord.Contains(sc.ch) || sc.Match('.', '.')) {
+				char s[100];
+				sc.GetCurrent(s, sizeof(s));
+				if (keywords3.InList(s)) {
+					sc.ChangeState(SCE_LUA_WORD3);
+				}
+				else if (keywords4.InList(s)) {
+					sc.ChangeState(SCE_LUA_WORD4);
+				}
+				else if (keywords5.InList(s)) {
+					sc.ChangeState(SCE_LUA_WORD5);
+				}
+				else if (keywords6.InList(s)) {
+					sc.ChangeState(SCE_LUA_WORD6);
+				}
+				else if (keywords7.InList(s)) {
+					sc.ChangeState(SCE_LUA_WORD7);
+				}
+				else if (keywords8.InList(s)) {
+					sc.ChangeState(SCE_LUA_WORD8);
+				}
+				if (sc.ch == '.' || sc.ch == ':') {
+					sc.ForwardSetState(SCE_LUA_OPERATOR);
+				}
+				else
+					sc.SetState(SCE_LUA_DEFAULT);
+			}
+#endif
 		} else if (sc.state == SCE_LUA_COMMENTLINE || sc.state == SCE_LUA_PREPROCESSOR) {
 			if (sc.atLineEnd) {
 				sc.ForwardSetState(SCE_LUA_DEFAULT);
@@ -206,6 +259,16 @@ static void ColouriseLuaDoc(
 				}
 			}
 		}
+
+#ifdef _KOOK_DECODA_
+		if (sc.state == SCE_LUA_OPERATOR) {
+			if (setWordStart.Contains(sc.ch)) {
+				sc.SetState(SCE_LUA_NEXTIDENTIFIER);
+			}
+			else
+				sc.SetState(SCE_LUA_DEFAULT);
+		}
+#endif
 
 		// Determine if a new state should be entered.
 		if (sc.state == SCE_LUA_DEFAULT) {
@@ -308,7 +371,11 @@ static void FoldLuaDoc(unsigned int startPos, int length, int /* initStyle */, W
 					s[j + 1] = '\0';
 				}
 
+#ifdef _KOOK_DECODA_
+				if ((strcmp(s, "if") == 0) || (strcmp(s, "do") == 0) || (strcmp(s, "function") == 0) || (strcmp(s, "fn") == 0) || (strcmp(s, "repeat") == 0)) {
+#else
 				if ((strcmp(s, "if") == 0) || (strcmp(s, "do") == 0) || (strcmp(s, "function") == 0) || (strcmp(s, "repeat") == 0)) {
+#endif
 					levelCurrent++;
 				}
 				if ((strcmp(s, "end") == 0) || (strcmp(s, "elseif") == 0) || (strcmp(s, "until") == 0)) {
